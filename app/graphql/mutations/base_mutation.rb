@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'graphql'
+
 module Mutations
   class BaseMutation < GraphQL::Schema::RelayClassicMutation
     argument_class Types::BaseArgument
