@@ -1,4 +1,4 @@
-# Tutorial project first touch with graphgl and raiils
+# Tutorial project first touch with graphQl and raiils
 
 
 ## Install
