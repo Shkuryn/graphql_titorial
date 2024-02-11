@@ -40,5 +40,46 @@ rails s
 
 ## Examples of queries
 
+go to http://localhost:3000/graphiql 
+
+try to execute next queries
+
+1) ** 3) products query**
+query {
+  allProducts {
+    id
+    title
+    description
+    vendor
+    color
+    price
+  }
+}
+
+
+** 2 ) mutation**
+    
+mutation {
+  addProduct(
+    input: {
+      title: "product_4",
+      description: "super-puper",
+      color: "white",
+      vendor: "apple",
+      price: 1212,
+
+    }
+  ) {
+    clientMutationId
+    product {
+      id
+      title
+      description
+      color
+      vendor
+      price
+    }
+  }
+}
 
 
