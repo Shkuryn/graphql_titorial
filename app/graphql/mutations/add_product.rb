@@ -11,16 +11,16 @@ module Mutations
 
     def resolve(title:, description:, color:, vendor:, price: nil)
       product = Product.create!(
-        title: title,
-        price: price,
-        vendor: vendor,
-        description: description,
-        color: color,
-        )
+        title:,
+        price:,
+        vendor:,
+        description:,
+        color:
+      )
 
       {
         client_mutation_id: context[:client_mutation_id],
-        product: product
+        product:
       }
     end
   end
