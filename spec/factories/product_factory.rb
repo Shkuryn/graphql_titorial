@@ -1,4 +1,3 @@
-
 FactoryBot.define do
   factory :product do
     sequence(:title) { |n| "Best product ever (#{n})" }

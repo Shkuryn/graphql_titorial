@@ -4,22 +4,22 @@ RSpec.describe Mutations::AddProduct, type: :request do
   describe '.resolve' do
     it 'creates a product' do
       expect do
-        post '/graphql', params: { query: query }
+        post '/graphql', params: { query: }
       end.to change { Product.count }.by(1)
     end
 
     it 'returns the created product' do
-      post '/graphql', params: { query: query }
+      post '/graphql', params: { query: }
       json = JSON.parse(response.body)
       data = json['data']['addProduct']['product']
 
       expect(data).to include(
-                        'id'           => be_present,
-                        'title'        => 'product_1',
-                        'description'  => 'super',
-                        'color'        => 'white',
-                        'vendor'       => 'apple'
-                      )
+        'id' => be_present,
+        'title' => 'product_1',
+        'description' => 'super',
+        'color' => 'white',
+        'vendor' => 'apple'
+      )
     end
   end
 

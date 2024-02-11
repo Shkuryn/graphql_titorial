@@ -24,15 +24,15 @@ RSpec.describe Types::QueryType do
 
       product1_attributes = all_products.find { |product| product['id'] == product1.id.to_s }
       expect(product1_attributes).to include(
-                                       'id' => product1.id.to_s,
-                                       'title' => product1.title,
-                                       )
+        'id' => product1.id.to_s,
+        'title' => product1.title
+      )
 
       product2_attributes = all_products.find { |product| product['id'] == product2.id.to_s }
       expect(product2_attributes).to include(
-                                       'id' => product2.id.to_s,
-                                       'title' => product2.title,
-                                       )
+        'id' => product2.id.to_s,
+        'title' => product2.title
+      )
     end
   end
 end
